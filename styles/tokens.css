@@ -1,0 +1,50 @@
+:root {
+  --bg: #f4f6f9;
+  --bg-elevated: #fbfcfd;
+  --surface: #ffffff;
+  --ink: #101828;
+  --ink-2: #344054;
+  --muted: #667085;
+  --muted-2: #98a2b3;
+  --line: #e4e7ec;
+  --line-strong: #d0d5dd;
+
+  --navy: #0b1b34;
+  --navy-2: #12294a;
+  --navy-3: #1b3a61;
+  --teal: #0e7c6b;
+  --teal-2: #12a08a;
+  --teal-soft: #e7f5f1;
+  --teal-ink: #085e51;
+
+  --amber: #b54708;
+  --amber-soft: #fef0c7;
+  --orange: #d97706;
+  --red: #b42318;
+  --red-soft: #fee4e2;
+  --blue: #175cd3;
+  --blue-soft: #eff4ff;
+  --purple: #6941c6;
+  --purple-soft: #f4f0ff;
+  --green: #067647;
+  --green-soft: #ecfdf3;
+  --slate-soft: #f2f4f7;
+
+  --radius-sm: 8px;
+  --radius: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 26px;
+
+  --shadow-xs: 0 1px 2px rgba(16, 24, 40, 0.04);
+  --shadow-sm: 0 1px 2px rgba(16, 24, 40, 0.04), 0 4px 12px rgba(16, 24, 40, 0.04);
+  --shadow-md: 0 8px 24px rgba(16, 24, 40, 0.08);
+  --shadow-lg: 0 24px 60px rgba(16, 24, 40, 0.16);
+
+  --sidebar-w: 248px;
+  --topbar-h: 68px;
+  --content-max: 1320px;
+
+  --font-sans: "Inter", "SF Pro Text", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
+  --font-mono: "SF Mono", "JetBrains Mono", "Cascadia Code", Consolas, monospace;
+}

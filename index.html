@@ -1,0 +1,136 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0b1b34" />
+    <meta
+      name="description"
+      content="OPC OS 演示版 —— 一人公司的合规、资金、客户与 AI 员工工作台。"
+    />
+    <title>OPC OS · 一人公司操作系统（演示版）</title>
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg" />
+    <link rel="stylesheet" href="./styles/tokens.css" />
+    <link rel="stylesheet" href="./styles/base.css" />
+    <link rel="stylesheet" href="./styles/layout.css" />
+    <link rel="stylesheet" href="./styles/components.css" />
+    <link rel="stylesheet" href="./styles/pages.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" id="sidebar" aria-label="主导航">
+        <div class="sidebar__brand">
+          <div class="brand-mark" aria-hidden="true">O</div>
+          <div>
+            <strong>OPC OS</strong>
+            <span>一人公司操作系统</span>
+          </div>
+        </div>
+
+        <button class="company-switch" type="button" data-action="company-switcher">
+          <span class="avatar avatar--sm">微</span>
+          <span class="company-switch__text">
+            <strong data-company-short>微澜智能</strong>
+            <span>演示工作区 · 杭州</span>
+          </span>
+          <span data-icon="chevronDown" data-size="14"></span>
+        </button>
+
+        <nav class="nav">
+          <p class="nav__label">总览</p>
+          <a class="nav__item is-active" href="#/dashboard" data-nav="#/dashboard">
+            <span data-icon="dashboard"></span><span>驾驶舱</span>
+          </a>
+          <a class="nav__item" href="#/compliance" data-nav="#/compliance">
+            <span data-icon="calendar"></span><span>合规日历</span>
+            <span class="nav__badge" data-nav-badge>7</span>
+          </a>
+
+          <p class="nav__label">经营</p>
+          <a class="nav__item" href="#/finance" data-nav="#/finance">
+            <span data-icon="wallet"></span><span>资金台账</span>
+          </a>
+          <a class="nav__item" href="#/clients" data-nav="#/clients">
+            <span data-icon="users"></span><span>客户与合同</span>
+          </a>
+
+          <p class="nav__label">公司</p>
+          <a class="nav__item" href="#/profile" data-nav="#/profile">
+            <span data-icon="building"></span><span>公司档案</span>
+          </a>
+          <a class="nav__item" href="#/policies" data-nav="#/policies">
+            <span data-icon="star"></span><span>政策与补贴</span>
+          </a>
+
+          <p class="nav__label">智能</p>
+          <a class="nav__item" href="#/assistant" data-nav="#/assistant">
+            <span data-icon="sparkles"></span><span>AI 老板助手</span>
+          </a>
+        </nav>
+
+        <div class="sidebar__spacer"></div>
+
+        <div class="sidebar__foot">
+          <div class="sidebar-score">
+            <div class="sidebar-score__value" data-health-ring style="--score: 86%">
+              <span data-health>86</span>
+            </div>
+            <div>
+              <strong>合规健康分</strong>
+              <p data-health-note>1 项逾期 · 建议今天处理</p>
+            </div>
+          </div>
+          <button class="user-card" type="button" data-nav="#/profile">
+            <span class="avatar avatar--sm avatar--round" style="--avatar-color:#E8B04B">李</span>
+            <span class="user-card__meta">
+              <strong data-founder>李然</strong>
+              <span>创始人 · 唯一股东</span>
+            </span>
+            <span data-icon="settings" data-size="15"></span>
+          </button>
+        </div>
+      </aside>
+
+      <div class="sidebar-scrim" data-action="toggle-sidebar" aria-hidden="true"></div>
+
+      <div class="main">
+        <header class="topbar">
+          <div class="topbar__left">
+            <button class="icon-btn menu-btn" type="button" data-action="toggle-sidebar" aria-label="打开菜单">
+              <span data-icon="menu" data-size="18"></span>
+            </button>
+            <div class="crumbs">
+              <span>工作台</span>
+              <span class="sep">/</span>
+              <strong id="page-title">驾驶舱</strong>
+            </div>
+          </div>
+          <div class="topbar__right">
+            <button class="search-trigger" type="button" data-action="open-palette" aria-label="搜索或跳转">
+              <span data-icon="search" data-size="15"></span>
+              <span>搜索或跳转</span>
+              <kbd>⌘K</kbd>
+            </button>
+            <button class="icon-btn" type="button" data-action="notifications" aria-label="通知">
+              <span data-icon="bell" data-size="17"></span>
+              <span class="dot"></span>
+            </button>
+            <div class="topbar__avatar" title="李然 · 创始人">LR</div>
+          </div>
+        </header>
+
+        <main class="content" id="app" aria-live="polite"></main>
+      </div>
+    </div>
+
+    <div id="modal-root"></div>
+    <div id="palette-root"></div>
+    <div id="toast-root"></div>
+
+    <noscript>
+      <div style="padding:24px;font-family:sans-serif">请启用 JavaScript 以使用 OPC OS 演示。</div>
+    </noscript>
+
+    <script type="module" src="./src/app.js"></script>
+  </body>
+</html>
